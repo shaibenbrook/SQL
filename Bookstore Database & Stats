@@ -1,0 +1,28 @@
+--Create bookstore database
+
+CREATE TABLE bookstore (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, genre TEXT, rating INTEGER);
+
+INSERT INTO bookstore VALUES(1, "Babel", 24.99, "Fantasy", 5);
+INSERT INTO bookstore VALUES(2, "I'm Glad My Mom Died", 21.99, "Memoir", 5);
+INSERT INTO bookstore VALUES(3, "Lessons in Chemistry", 23.99, "Fiction", 4.5);
+INSERT INTO bookstore VALUES(4, "The Light We Carry", 26.00, "Autobiography", 4);
+INSERT INTO bookstore VALUES(5, "Our Missing Hearts", 29.00, "Fiction", 4.7);
+INSERT INTO bookstore VALUES(6, "The Song of the Cell", 16.25, "Biography", 5);
+INSERT INTO bookstore VALUES(7, "A World of Curiosities", 20.99, "Mystery", 4.6);
+INSERT INTO bookstore VALUES(8, "The Rabbit Hutch", 20.99, "Fiction", 3.3);
+INSERT INTO bookstore VALUES(9, "Prisoners of the Castle", 28.99, "True Crime", 5);
+INSERT INTO bookstore VALUES(10, "Skandar and the Unicorn Thief", 9.49, "Fantasy", 4.7);
+INSERT INTO bookstore VALUES(11, "Now Is Not the Time to Panic", 22.99, "Fiction", 4.3);
+INSERT INTO bookstore VALUES(12, "If He Had Been with Me", 9.89, "Fiction", 4.6);
+INSERT INTO bookstore VALUES(13, "The Last Thing He Told Me", 13.50, "Fiction", 4.2);
+INSERT INTO bookstore VALUES(14, "The Silent Patient", 14.99, "Thriller", 4.5);
+INSERT INTO bookstore VALUES(15, "A Good Girl's Guide to Murder", 9.49, "Mystery", 5);
+
+--Display the database ordered by price.
+SELECT * FROM bookstore ORDER BY price;
+
+--What books have a rating greater than 4.7?
+SELECT name FROM bookstore WHERE rating > 4.7 ORDER BY price;
+
+--What is the average price for a Fiction book?
+SELECT avg(price) FROM bookstore WHERE genre ="Fiction";
