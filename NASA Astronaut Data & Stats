@@ -1,0 +1,80 @@
+/* NASA Astronaut Database & Stats
+ Source:
+  https://www.kaggle.com/nasa/astronaut-yearbook
+*/
+
+CREATE TABLE astronauts(
+   Name                TEXT PRIMARY KEY,
+   Year                INTEGER,
+   GroupNum            INTEGER,
+   Status              TEXT,
+   Birth_Date          TEXT,
+   Birth_Place         TEXT,
+   Gender              TEXT,
+   Alma_Mater          TEXT,
+   Undergraduate_Major TEXT,
+   Graduate_Major      TEXT,
+   Military_Rank       TEXT,
+   Military_Branch     TEXT,
+   Space_Flights       INTEGER,
+   Space_Flight_hr     INTEGER,
+   Space_Walks         INTEGER,
+   Space_Walks_hr      REAL,
+   Missions            TEXT,
+   Death_Date          TEXT, 
+   Death_Mission       TEXT
+);
+
+INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('Joseph M. Acaba',2004,19,'Active','5/17/1967','Inglewood, CA','Male','University of California-Santa Barbara; University of Arizona','Geology','Geology',NULL,NULL,2,3307,2,13,'STS-119 (Discovery), ISS-31/32 (Soyuz)',NULL,NULL);
+INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('Loren W. Acton',NULL,NULL,'Retired','3/7/1936','Lewiston, MT','Male','Montana State University; University of Colorado','Engineering Physics','Solar Physics',NULL,NULL,1,190,0,0,'STS 51-F (Challenger)',NULL,NULL);
+INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('James C. Adamson',1984,10,'Retired','3/3/1946','Warsaw, NY','Male','US Military Academy; Princeton University','Engineering','Aerospace Engineering','Colonel','US Army (Retired)',2,334,0,0,'STS-28 (Columbia), STS-43 (Atlantis)',NULL,NULL);
+INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('Thomas D. Akers',1987,12,'Retired','5/20/1951','St. Louis, MO','Male','University of Missouri-Rolla','Applied Mathematics','Applied Mathematics','Colonel','US Air Force (Retired)',4,814,4,29,'STS-41 (Discovery), STS-49 (Endeavor), STS-61 (Endeavor), STS-79 (Atlantis)',NULL,NULL);
+INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('Buzz Aldrin',1963,3,'Retired','1/20/1930','Montclair, NJ','Male','US Military Academy; MIT','Mechanical Engineering','Astronautics','Colonel','US Air Force (Retired)',2,289,2,8,'Gemini 12, Apollo 11',NULL,NULL);
+INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('Andrew M. Allen',1987,12,'Retired','8/4/1955','Philadelphia, PA','Male','Villanova University; University of Florida','Mechanical Engineering','Business Administration','Lieutenant Colonel','US Marine Corps (Retired)',3,906,0,0,'STS-46 (Atlantis), STS-62 (Columbia), STS-75 (Columbia)',NULL,NULL);
+INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('Joseph P. Allen',1967,6,'Retired','6/27/1937','Crawsfordsville, IN','Male','DePauw University; Yale University','Mathematics & Physics','Physics',NULL,NULL,2,313,2,12,'ST-5 (Columbia), STS 51-A (Discovery)',NULL,NULL);
+INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('Scott D. Altman',1995,15,'Retired','8/15/1959','Lincoln, IL','Male','University of Illinois; US Naval Postgraduate School','Aeronautical & Astronautical Engineering','Aeronautical Engineering','Captain','US Navy (Retired)',4,1236,0,0,'STS-90 (Columbia), STS-106 (Atlantis), STS-109 (Columbia), STS-125 (Atlantis)',NULL,NULL);
+INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('William A. Anders',1963,3,'Retired','10/17/1933','Hong Kong','Male','US Naval Academy; Air Force Institute of Technology','Nuclear Engineering','Nuclear Engineering','Major General','US Air Force Reserves (Retired)',1,147,0,0,'Apollo 8',NULL,NULL);
+INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('Clayton C. Anderson',1998,17,'Retired','2/23/1959','Omaha, NE','Male','Hastings College; Iowa State University','Physics','Aerospace Engineering',NULL,NULL,2,4005,6,38,'STS-117/120 (Atlantis/Discovery), STS-131 (Discovery)',NULL,NULL);
+INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('Michael P. Anderson',1995,15,'Deceased','12/25/1959','Plattsburgh, NY','Male','University of Washington; Creighton University','Physics & Astronomy','Physics','Lieutenant Colonel','US Air Force',2,594,0,0,'STS-89 (Endeavor), STS-107 (Columbia)','2/1/2003','STS-107 (Columbia)');
+INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('Dominic A. Antonelli',2000,18,'Active','8/23/1967','Detroit, MI','Male','MIT; University of Washington','Aeronautics & Astronautics','Aeronautics & Astronautics','Commander','US Navy',2,579,0,0,'STS-119 (Discovery), STS-132 (Atlantis)',NULL,NULL);
+INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('Jerome Apt III',1985,11,'Retired','4/18/1949','Springfield, MA','Male','Harvard University; MIT','Physics','Physics',NULL,NULL,4,847,2,11,'STS-37 (Atlantis), STS-47 (Endeavor), STS-59 (Endeavor), STS-79 (Atlantis)',NULL,NULL);
+INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('Lee J. Archambault',1998,17,'Retired','8/25/1960','Oak Park, IL','Male','University of Illinois-Urbana','Aeronautical & Astronautical Engineering','Aeronautical & Astronautical Engineering','Colonel','US Air Force',2,639,0,0,'STS-117 (Atlantis), STS-119 (Discovery)',NULL,NULL);
+INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('Neil A. Armstrong',1962,2,'Deceased','8/5/1930','Wapakoneta, OH','Male','Purdue University; University of Southern California','Aeronautical Engineering','Aerospace Engineering',NULL,NULL,2,205,1,2,'Gemini 8, Apollo 11','8/25/2012',NULL);
+INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('Richard R. Arnold II',2004,19,'Active','11/26/1963','Cheverly, MD','Male','Frostburg State University; University of Maryland','Accounting','Environmental Science',NULL,NULL,1,307,2,12,'STS-119 (Discovery)',NULL,NULL);
+INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('Jeffrey S. Ashby',1995,15,'Retired','6/1/1954','Dallas, TX','Male','University of Idaho; University of Tennessee','Mechanical Engineering','Aviation Systems','Captain','US Navy (Retired)',3,655,0,0,'STS-93 (Columbia), STS-100 (Endeavor), STS-112 (Atlantis)',NULL,NULL);
+INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('Serena M. Aunon',2009,20,'Active','4/9/1976','Indianapolis, IN','Female','George Washington University; University of Texas','Electrical Engineering','Medicine',NULL,NULL,0,0,0,0,NULL,NULL,NULL);
+INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('James P. Bagian',1980,9,'Retired','2/22/1952','Philadelphia, PA','Male','Drexel University; Thomas Jefferson University','Mechanical Engineering','Medicine',NULL,NULL,2,337,0,0,'STS-29 (Discovery), STS-40 (Columbia)',NULL,NULL);
+INSERT INTO astronauts(Name,Year,GroupNum,Status,Birth_Date,Birth_Place,Gender,Alma_Mater,Undergraduate_Major,Graduate_Major,Military_Rank,Military_Branch,Space_Flights,Space_Flight_hr,Space_Walks,Space_Walks_hr,Missions,Death_Date,Death_Mission) VALUES ('Ellen S. Baker',1984,10,'Retired','4/27/1953','Fayettesville, NC','Female','State University of New York-Buffalo; Cornell University; University of Texas','Geology','Medicine; Public Health',NULL,NULL,3,686,0,0,'STS-34 (Atlantis), STS-50 (Columbia), STS-71 (Atlantis)',NULL,NULL);
+
+/* What is the average number of space walks? */
+SELECT AVG(Space_Walks) FROM astronauts;
+
+/* What is the average time of a space walk? */
+SELECT AVG(Space_Walks_hr) FROM astronauts;
+
+/* Who had the longest space walk? */
+SELECT Name, Space_Walks_hr FROM astronauts WHERE Space_Walks_hr > 15 ORDER BY Space_Walks_hr; 
+
+/* How many female astronauts had space flights? */
+SELECT COUNT(*) FROM astronauts WHERE Gender = "Female" AND Space_Flights >= 1; 
+
+/* What is the average time for space flight hours? */
+SELECT AVG(Space_Flight_hr) FROM astronauts; 
+
+/* Which astronauts have an above average amount of time on space flights? */
+SELECT Name, CASE
+    WHEN Space_Flight_hr = 819 THEN "Average"
+    WHEN Space_Flight_hr > 819 THEN "Above Average"
+    ELSE "Below Average" 
+    END average_flight_hr
+FROM astronauts 
+ORDER BY average_flight_hr;
+
+/* How many astronauts have an above average amount of time on space flights? */
+SELECT COUNT(*), CASE
+    WHEN Space_Flight_hr = 819 THEN "Average"
+    WHEN Space_Flight_hr > 819 THEN "Above Average"
+    ELSE "Below Average" 
+    END average_flight_hr
+FROM astronauts 
+GROUP BY average_flight_hr;
