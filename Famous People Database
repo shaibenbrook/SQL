@@ -9,25 +9,38 @@ INSERT INTO students (first_name, last_name, hogwarts_house) VALUES ("Hermione",
 INSERT INTO students (first_name, last_name, hogwarts_house) VALUES ("Draco", "Malfoy", "Slytherin");
 INSERT INTO students (first_name, last_name, hogwarts_house) VALUES ("Severus", "Snap", "Slytherin");
 
-CREATE TABLE hobbies (
-id INTEGER PRIMARY KEY AUTOINCREMENT, person_id INTEGER, hobby_name TEXT);
+CREATE TABLE class (
+id INTEGER PRIMARY KEY AUTOINCREMENT, person_id INTEGER, class_name TEXT);
 
-INSERT INTO hobbies (person_id, hobby_name) VALUES (1, "Quidditch");
-INSERT INTO hobbies (person_id, hobby_name) VALUES (1, "Potions");
-INSERT INTO hobbies (person_id, hobby_name) VALUES (1, "Mammalogy");
-INSERT INTO hobbies (person_id, hobby_name) VALUES (2, "Mammalogy");
-INSERT INTO hobbies (person_id, hobby_name) VALUES (2, "Dark Arts");
-INSERT INTO hobbies (person_id, hobby_name) VALUES (3, "Herbology");
-INSERT INTO hobbies (person_id, hobby_name) VALUES (3, "Dark Arts");
-INSERT INTO hobbies (person_id, hobby_name) VALUES (4, "Herbology");
-INSERT INTO hobbies (person_id, hobby_name) VALUES (4, "Quidditch");
-INSERT INTO hobbies (person_id, hobby_name) VALUES (5, "Potions");
+INSERT INTO class (person_id, class_name) VALUES (1, "Quidditch");
+INSERT INTO class (person_id, class_name) VALUES (1, "Potions");
+INSERT INTO class (person_id, class_name) VALUES (1, "Mammalogy");
+INSERT INTO class (person_id, class_name) VALUES (2, "Mammalogy");
+INSERT INTO class (person_id, class_name) VALUES (2, "Dark Arts");
+INSERT INTO class (person_id, class_name) VALUES (3, "Herbology");
+INSERT INTO class (person_id, class_name) VALUES (3, "Dark Arts");
+INSERT INTO class (person_id, class_name) VALUES (4, "Herbology");
+INSERT INTO class (person_id, class_name) VALUES (4, "Quidditch");
+INSERT INTO class (person_id, class_name) VALUES (5, "Potions");
 
 CREATE table study_partners (
     id INTEGER PRIMARY KEY AUTOINCREMENT, student1_id INTEGER, student2_id INTEGER);
 
 INSERT INTO study_partners (student1_id, student2_id) VALUES (1, 2);
-INSERT INTO study_partners (student1_id, student2_id) VALUES (1, 4);
 INSERT INTO study_partners (student1_id, student2_id) VALUES (1, 5);
 INSERT INTO study_partners (student1_id, student2_id) VALUES (2, 3);
 INSERT INTO study_partners (student1_id, student2_id) VALUES (3, 4);
+
+/* What classes are the students enrolled in? */
+SELECT students.first_name, students.last_name, class.class_name FROM students
+JOIN class 
+ON class.person_id = students.id
+ORDER BY class.class_name;
+
+/* For each class, determine each students study partner. */
+SELECT a.first_name, b.first_name
+FROM study_partners
+JOIN students a
+ON a.id = student1_id
+JOIN students b
+ON b.id = student2_id;
