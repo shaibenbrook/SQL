@@ -1,0 +1,35 @@
+Tables related to Netflix movies/TV shows, directors, and cast. (PostgreSQL)
+
+/* Join both tables by related data. */
+SELECT people.show_id, people.director,
+titles.title, titles.type FROM 
+"CharlotteChaze/BreakIntoTech"."netflix_people" people
+LEFT JOIN "CharlotteChaze/BreakIntoTech"."netflix_titles_info" titles
+ON people.show_id=titles.show_id;
+
+/* How many movie titles are there in the database? */ Answer 6,131
+SELECT count(*) FROM 
+"CharlotteChaze/BreakIntoTech"."netflix_titles_info" titles
+WHERE titles.type = 'Movie';
+
+/* When was the the most recent batch of tv shows and/or movies added to the database? */ Anser 2021-09-25
+SELECT max(date(date_added)) FROM
+"CharlotteChaze/BreakIntoTech"."netflix_titles_info" titles;
+
+/* List all the movies and tv shows in alphabetical order. */
+SELECT title FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info" titles
+ORDER BY title;
+
+/* Who was the director for the movie Bright Star? */ Answer Jane Campion
+SELECT director FROM 
+"CharlotteChaze/BreakIntoTech"."netflix_titles_info" titles
+LEFT JOIN "CharlotteChaze/BreakIntoTech"."netflix_people" people
+ON titles.show_id = people.show_id
+WHERE titles.title = 'Bright Star';
+
+/* What is the oldest movie in the database and what year was it made? */ Answer Prelude to War, 1942
+SELECT title, release_year FROM 
+"CharlotteChaze/BreakIntoTech"."netflix_titles_info"
+WHERE type='Movie' 
+ORDER BY release_year
+LIMIT 1;
